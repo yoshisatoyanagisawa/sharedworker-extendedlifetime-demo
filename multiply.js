@@ -9,12 +9,12 @@ const result2 = document.querySelector(".result2");
 function setup(label, worker, field1, field2, result) {
   [field1, field2].forEach((input) => {
     input.onchange = () => {
-      myWorker.port.postMessage([field1.value, field2.value]);
+      worker.port.postMessage([field1.value, field2.value]);
       console.log(label + ":Message posted to worker");
     };
   });
 
-  myWorker.port.onmessage = (e) => {
+  worker.port.onmessage = (e) => {
     result1.textContent = e.data;
     console.log(label + ":Message received from worker");
     console.log(label + ":" + e.lastEventId);
