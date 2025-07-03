@@ -15,7 +15,7 @@ function setup(label, worker, field1, field2, result) {
   });
 
   worker.port.onmessage = (e) => {
-    result1.textContent = e.data;
+    result.textContent = e.data;
     console.log(label + ":Message received from worker");
     console.log(label + ":" + e.lastEventId);
   };
