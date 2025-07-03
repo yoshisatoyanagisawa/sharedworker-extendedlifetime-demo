@@ -1,4 +1,4 @@
-# sharedworker-extendedlifetime-demo.dev
+# sharedworker-extendedlifetime-demo
 A demo page for the SharedWorker extendedLifetime option
 
 This is mostly a copy of https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker,
