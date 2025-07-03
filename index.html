@@ -12,6 +12,7 @@
   <body>
     <h1>Shared<br />Workers<br />extendedLifetime<br />example</h1>
 
+    <h2>With extendedLifetime</h2>
     <div class="controls" tabindex="0">
       <form>
         <div>
@@ -27,11 +28,27 @@
       <p class="result1">Result: 0</p>
     </div>
 
+    <h2>Without extendedLifetime</h2>
+    <div class="controls" tabindex="0">
+      <form>
+        <div>
+          <label for="number3">Multiply number 3: </label>
+          <input type="text" id="number3" value="0" />
+        </div>
+        <div>
+          <label for="number4">Multiply number 4: </label>
+          <input type="text" id="number4" value="0" />
+        </div>
+      </form>
+
+      <p class="result2">Result: 0</p>
+    </div>
+    
     <script src="multiply.js"></script>
     <script src="nosubmit.js"></script>
     This demo is based on <a href="https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker">
       https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker</a>, and modified for supporting the
     extendedLifetime option.<br />
-    Please close the page, and reopen to see the SharedWorker instance continues.
+    Please close the page, and reopen to see if the SharedWorker instance continues.
   </body>
 </html>
