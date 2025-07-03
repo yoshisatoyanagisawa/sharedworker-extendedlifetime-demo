@@ -27,5 +27,5 @@ if (!!window.SharedWorker) {
     setup("extendedLifetime", worker1, num1, num2, result1);
 
     const worker2 = new SharedWorker("worker.js", {name: "legacy"});
-    setup("extendedLifetime", worker2, num3, num4, result2);
+    setup("legacy", worker2, num3, num4, result2);
 }
