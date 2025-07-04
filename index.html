@@ -4,13 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
 
-    <title>SharedWorkers extendedLifetime example</title>
+    <title>SharedWorkers extendedLifetime demo</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <h1>Shared<br />Workers<br />extendedLifetime<br />example</h1>
+    <h1>Shared<br />Workers<br />extendedLifetime<br />demo</h1>
 
     <h2>With extendedLifetime</h2>
     <div class="controls" tabindex="0">
@@ -23,6 +23,7 @@
           <label for="number2">Multiply number 2: </label>
           <input type="text" id="number2" value="0" />
         </div>
+        <div>You will see the previous result after reload.</div>
       </form>
 
       <p class="result1">Result: 0</p>
@@ -39,6 +40,7 @@
           <label for="number4">Multiply number 4: </label>
           <input type="text" id="number4" value="0" />
         </div>
+        <div>You may not see the previous result after reload if no other windows open.</div>
       </form>
 
       <p class="result2">Result: 0</p>
