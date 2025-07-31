@@ -6,11 +6,15 @@ const num4 = document.querySelector("#number4");
 const result1 = document.querySelector(".result1");
 const result2 = document.querySelector(".result2");
 
+function postMessage(label, worker, value1, value2) {
+  worker.port.postMessage([value1, value2]);
+  console.log(label + ":Message posted to worker");
+}
+
 function setup(label, worker, field1, field2, result) {
   [field1, field2].forEach((input) => {
     input.onchange = () => {
-      worker.port.postMessage([field1.value, field2.value]);
-      console.log(label + ":Message posted to worker");
+      postMessage(label, worker, field1.value, field2.value);
     };
   });
 
@@ -19,6 +23,8 @@ function setup(label, worker, field1, field2, result) {
     console.log(label + ":Message received from worker");
     console.log(label + ":" + e.lastEventId);
   };
+
+  postMessage(label, worker, field1.value, field2.value);
 }
 
 if (!!window.SharedWorker) {
