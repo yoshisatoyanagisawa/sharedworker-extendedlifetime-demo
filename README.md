@@ -6,3 +6,5 @@ while SharedWorker is started with the `extendedLifetime` option.
 
 **Explainer:** https://gist.github.com/domenic/c5bd38339f33b49120ae11b3b4af5b9b#file-1-explainer-md  
 **Chromeestatus:** https://chromestatus.com/feature/5138641357373440
+
+Please access https://sharedworker-extendedlifetime.netlify.app/ to see how the feature works.
