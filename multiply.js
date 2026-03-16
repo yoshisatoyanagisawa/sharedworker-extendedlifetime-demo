@@ -30,12 +30,12 @@ function setup(label, worker, field1, field2, result) {
 if (!!window.SharedWorker) {
     const scriptUrl = document.currentScript.src;
     const scriptDir = scriptUrl.substring(0, scriptUrl.lastIndexOf('/') + 1);
-    console.log(scriptDir);
+    const workerSrc = scriptDir + "worker.js";
 
     // Create with the extendedLifetime option.
-    const worker1 = new SharedWorker("worker.js", {name: "extendedLifetime", extendedLifetime: true});
+    const worker1 = new SharedWorker(workerSrc, {name: "extendedLifetime", extendedLifetime: true});
     setup("extendedLifetime", worker1, num1, num2, result1);
 
-    const worker2 = new SharedWorker("worker.js", {name: "legacy"});
+    const worker2 = new SharedWorker(workerSrc, {name: "legacy"});
     setup("legacy", worker2, num3, num4, result2);
 }
